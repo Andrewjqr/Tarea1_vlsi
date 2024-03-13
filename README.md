@@ -1,2 +1,2 @@
 # Tarea1_vlsi
-## Introducción
+## Parte 1
