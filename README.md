@@ -259,6 +259,7 @@ Esto indica una diferencia de 2.0219ps.
 
 ## Comparación de simulación y cálculos
 
-Se puede calcular la diferencia de los tiempos de propagación para diferentes fanouts mantienendo la relación $P/N = 2/1$ y siguiendo la formula para los valores de $h=3$ y $h=4$: 
+Se puede calcular la diferencia de los tiempos de propagación para diferentes fanouts mantienendo la relación $P/N = 2/1$ y siguiendo la formula para los valores de $h=3$ y $h=4$:
+
 $$\Delta t_{pdr}= \frac{3}{2}R_pC = 6.99*10^{-18}s$$
 $$\Delta t_{pdf}=3R_nC=2.5*10^{-18}s$$
