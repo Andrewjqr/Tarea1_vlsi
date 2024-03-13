@@ -37,7 +37,7 @@ $$V_{inv}=\frac{1.8-0.6+0.45}{2}=0.825V$$
 ### NMOS - Curva característica
 Para las curvas características del NMOS se genera el diagrama de la siguente manera:
 
-![alt text](image-3.png)
+![alt text](imagenes/nmos_esquematico.png)
 
 Para poder variar los valores de las fuentes v4 y v5 se utiliza el siguiente código:
 ```sp
@@ -73,12 +73,12 @@ v4 vgs gnd 0
 ```
 Una vez con la simulación se obtienen los datos para la curva característica, la cual se muestra en la siguiente figura:
 
-![alt text](image-1.png)
+![alt text](imagenes/curva_caracteristica.png)
 
 ## Inversor
 El esquemático utilizado para el inversor se muestra en la siguiente figura:
 
-![alt text](image-4.png)
+![alt text](imagenes/inversor_esquematico.png)
 
 Para simular el voltaje de salida y entrada se utliza el siguiente código:
 ```
@@ -117,11 +117,11 @@ v7 net13 gnd dc=0 pulse ( 0 1.8 0 100p 100p 2n 4.2n )
 ```
 Este código da como resultado gráficamente el voltaje de salida (V(out)) y entrada (V(net13)) como se muestra en la siguiente figura:
 
-![alt text](image-5.png)
+![alt text](imagenes/Vin_Vout.png)
 
 Y también se puede obtener las gráficas con el valor de la corriente Ids(i(v2)) y la tensión de salida v(out) como se muestra en la siguiente:
 
-![alt text](image-6.png)
+![alt text](imagenes/Vout_ID.png)
 
 ## Fanout of 4 (Fo4) - Inversor
 Para esta sección se utiliza el siguiente código para crear subcircuitos del inversor:
@@ -178,7 +178,9 @@ X5 e f inv M='H**4' * load on load
 .end
 ```
 Con estos subcircuitos se obtiene la siguiente gráfica de Fo4 del inversor:
-![alt text](image-7.png)
+
+![alt text](imagenes/fo4.png)
+
 De esta gráfica se obtienen los valores de tpdr, tpdf, tpd, trise, tfall, también junto con los valores de TRIG y TARG los cuáles indican los eventos de activación y objetivo entre los cuales se mide el retraso. Los cuales se muestran en la siguiente tabla:
 |Parámetro|Tiempo(ps)|Targ|Trig|
 |---|---|---|---|
@@ -243,7 +245,9 @@ X5 e f inv P='P1' M=256 * load on load
 .end
 ```
 Con el código anterior se obtiene la siguiente gráfica:
-![alt text](image-9.png)
+
+![alt text](imagenes/fo4opt.png)
+
 Y en base a estos resultados también se obtienen los siguientes valores ya optimizados:
 |Parámetro|Tiempo(ps)|Targ|Trig|
 |---|---|---|---|
