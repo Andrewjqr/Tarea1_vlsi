@@ -3,6 +3,7 @@
 ## Solución
 ### NMOS - Curva característica
 Para las curvas características del NMOS se genera el diagrama de la siguente manera:
+
 ![alt text](image-3.png)
 
 Para poder variar los valores de las fuentes v4 y v5 se utiliza el siguiente código:
