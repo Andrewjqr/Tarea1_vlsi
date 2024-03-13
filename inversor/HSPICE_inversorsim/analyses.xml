@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--Created by Custom Compiler (TM), build , on Sat Mar  9 21:56:30 2024-->
+<file-format name="stateCategory" version="1.0">
+ <collection name="analyses">
+  <object name="analyses" type="saAnalysis" version="1">
+   <attribute name="advanced" type="giBoolean" value="0"/>
+   <attribute name="card" type="giString" value=""/>
+   <attribute name="definition" type="giString" value="tran"/>
+   <attribute name="description" type="giString" value=""/>
+   <attribute name="doRestore" type="giBoolean" value="0"/>
+   <attribute name="doSave" type="giBoolean" value="0"/>
+   <attribute name="enabled" type="giBoolean" value="1"/>
+   <attribute name="fmax" type="giString" value="0"/>
+   <attribute name="fmin" type="giString" value=""/>
+   <attribute name="method" type="giString" value="Temp Sweep"/>
+   <attribute name="name" type="giString" value="tran"/>
+   <collection name="options"/>
+   <attribute name="prUCLICommands" type="giString" value=""/>
+   <attribute name="restorePoint" type="giString" value=""/>
+   <attribute name="saveList" type="giString" value=""/>
+   <attribute name="scale" type="giString" value="1.0"/>
+   <attribute name="seed" type="giString" value=""/>
+   <attribute name="step" type="giString" value="10p"/>
+   <attribute name="stop" type="giString" value="10n"/>
+   <attribute name="tempStep" type="giString" value=""/>
+   <attribute name="tempValues" type="giString" value=""/>
+   <attribute name="tranNoise" type="giBoolean" value="0"/>
+   <attribute name="uic" type="giBoolean" value="0"/>
+   <attribute name="useCard" type="giBoolean" value="0"/>
+  </object>
+ </collection>
+</file-format>

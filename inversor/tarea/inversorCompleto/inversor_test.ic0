@@ -1,0 +1,16 @@
+* "simulator" "PrimeSim HSPICE"
+* "version" "U-2023.03-SP2 linux64"
+* "format" "HSP"
+* "rundate" "18:34:09 03/10/2024 "
+* "netlist" "inversor_test.sp "
+* "runtitle" "*  inversor_test.sp"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ net13 =   0.            
++ net9 =   1.8000        
++ out =   1.8000        
+***   END: Saved Operating Point ***                     
