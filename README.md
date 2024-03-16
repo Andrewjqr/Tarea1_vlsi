@@ -191,6 +191,26 @@ De esta gráfica se obtienen los valores de tpdr, tpdf, tpd, trise, tfall, tambi
 |trise|74.8842|331.3362|256.4520|
 |tfall|60.8461|210.2863|149.4412|
 
+## Fo4 - variación manual de PMOS
+
+Los datos que se hicieron manualmente se encuentran en la siguiente tabla (las comprobaciones se encuentran en la capeta de de (imagenes/tiempos)):
+|PMOS(nm)|PMOS/NMOS|tpdr(ps)|tpdf(ps)|diferencia = tpdr-tpdf [ps]|
+|-------|------|-------|--------|-------|
+|418,0000|1,9000|58,2700|58,2194|0,05060|
+|418,1250|1,9005|58,2633|58,2249|0,03840|
+|418,4750|1,9021|58,2443|58,2403|0,00400|
+|418,4975|1,9022|58,2431|58,2413|0,00180|
+|418,5250|1,9023|58,2416|58,2425|-0,0009|
+|422.1800|1,9190|58,0323|58,4131|-0,3808|
+|422.4000|1,9200|58,0190|58,4252|-0,4062|
+|425,0000|1,9318|57,8570|58,5676|-0,7106|
+|440,0000|2,0000|56,7592|59,3732|-2,6140|
+
+La gráfica de la relación PMOS/NOMS con tpdr, tpdf se muestra en la siguiente imagen:
+![alt text](imagenes/graficaRelacion.png)
+
+En base a los resultados obtenidos de las variaciones manuales, el valor que más se aproxima a una diferencia de tpdr-tpdf igual a 0, es el que tiene el tamaño de PMOS de 418,525n con una relación de PMOS/NMOS igual a 1.9023, ya que su valor de tpdr-tpdf = -0.0009ps o mejor dicho -900a, en donde en la gráfica se observa donde se cruzan las dos lineas con un promedio de tiempo de **58.24205ps**.
+
 ## Fo4 optimizado - Inversor
 Para obtener la optimización del Fo4 se utiliza el siguiente código:
 ```
@@ -249,14 +269,14 @@ Con el código anterior se obtiene la siguiente gráfica:
 
 ![alt text](imagenes/fo4opt.png)
 
-Y en base a estos resultados también se obtienen los siguientes valores ya optimizados:
+Y en base a estos resultados también se obtienen los siguientes valores ya optimizados con el PMOS = 423.49nm.
 |Parámetro|Tiempo(ps)|Targ|Trig|
 |---|---|---|---|
 |tpdr|57.9524|297.3057|239.3533|
 |tpdf|58.4849|174.5592|116.0743|
 |tpd|58.2187|||
 
-Esto indica una diferencia de tpdr-tpdf de -532.5770fs.
+Esto indica una diferencia de tpdr-tpdf de -532.5770fs, si la meta es de 0, el valor es bastante aproximado.
 
 ## Comparación de simulación y cálculos
 
