@@ -1,12 +1,13 @@
-* fo4opt.sp
+* fo4.sp
 *----------------------------------------------------------------------
 * Parameters and models
 *----------------------------------------------------------------------
 .param SUPPLY=1.8
-.option scale=25n
 .lib '/mnt/vol_NFS_rh003/Est_VLSI_I_2024/Faerron_Duran_I_2024_vlsi/tutorial/Hspice/lp5mos/xt018.lib' tm
 .lib '/mnt/vol_NFS_rh003/Est_VLSI_I_2024/Faerron_Duran_I_2024_vlsi/tutorial/Hspice/lp5mos/param.lib' 3s
 .lib '/mnt/vol_NFS_rh003/Est_VLSI_I_2024/Faerron_Duran_I_2024_vlsi/tutorial/Hspice/lp5mos/config.lib' default
+.param H=4
+.option scale=25n
 .temp 70
 .option post
 *----------------------------------------------------------------------
@@ -23,28 +24,27 @@ xm1 y a vdd vdd pe W='P' L=7.2
 * Simulation netlist
 *----------------------------------------------------------------------
 Vdd vdd gnd 'SUPPLY'
-Vin a gnd PULSE 0 'SUPPLY' 0ps 20ps 20ps 120ps 280ps
-X1 a b inv P='P1' * shape input waveform
-X2 b c inv P='P1' M=4 * reshape input waveform
-X3 c d inv P='P1' M=16 * device under test
-X4 d e inv P='P1' M=64 * load
-X5 e f inv P='P1' M=256 * load on load
-*----------------------------------------------------------------------
-* Optimization setup
-*----------------------------------------------------------------------
-.param P1=optrange(17.6,8.8,35.2) * search from 8.8 to 35.2, guess 17.6
-.model optmod opt itropt=30 * maximum of 30 iterations
-.measure bestratio param='P1/4' * compute best P/N ratio
+Vin a gnd PULSE 0 'SUPPLY'  0ps 20ps 20ps 120ps 280ps
+X1 a b inv * shape input waveform
+X2 b c inv M='H' * reshape input waveform
+X3 c d inv M='H**2' * device under test
+X4 d e inv M='H**3' * load
+X5 e f inv M='H**4' * load on load
 *----------------------------------------------------------------------
 * Stimulus
 *----------------------------------------------------------------------
-.tran 10p 10n SWEEP OPTIMIZE=optrange RESULTS=diff MODEL=optmod
-.measure tpdr * rising propagation delay
-+ TRIG v(c) VAL='SUPPLY/2' FALL=1 
+.tran 10p 10n
+.measure tpdr * rising prop delay
++ TRIG v(c) VAL='SUPPLY/2' FALL=1
 + TARG v(d) VAL='SUPPLY/2' RISE=1
-.measure tpdf * falling propagation delay
+.measure tpdf * falling prop delay
 + TRIG v(c) VAL='SUPPLY/2' RISE=1
-+ TARG v(d) VAL='SUPPLY/2' FALL=1 
-.measure tpd param='(tpdr+tpdf)/2' goal=0 * average prop delay
-.measure diff param='tpdr-tpdf' goal = 0 * diff between delays
++ TARG v(d) VAL='SUPPLY/2' FALL=1
+.measure tpd param='(tpdr+tpdf)/2' * average prop delay
+.measure trise * rise time
++ TRIG v(d) VAL='0.2*SUPPLY' RISE=1
++ TARG v(d) VAL='0.8*SUPPLY' RISE=1
+.measure tfall * fall time
++ TRIG v(d) VAL='0.8*SUPPLY' FALL=1
++ TARG v(d) VAL='0.2*SUPPLY' FALL=1
 .end

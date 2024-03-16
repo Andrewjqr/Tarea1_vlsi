@@ -1,0 +1,54 @@
+****** PrimeSim HSPICE -- U-2023.03-SP2 linux64 (Aug 24 2023 8388748) ******
+Input File: fo4manual.sp
+lic:
+lic: FLEXlm: SDK_12.11.9.1
+lic: USER:   Faerron_Duran_I_2024_vlsi HOSTNAME: redhat003
+lic: HOSTID: 7f0100               PID:      434482
+lic: Using FLEXlm license file:
+lic: 27000@172.21.9.211
+lic: Checkout 1 hspice
+lic: License/Maintenance for hspice will expire on 22-oct-2024/2023.03
+lic: 1(in_use)/50(total) FLOATING license(s) on SERVER 27000@172.21.9.211
+lic:
+
+ init: begin read circuit files, cpu clock= 8.46E-01
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/ad
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/behave
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/bjt
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/burr_brn
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/comlinear
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/dio
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/fet
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/lin_tech
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/pci
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/signet
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/ti
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/tline
+       option search = /mnt/vol_synopsys2023/synopsys/hspice/U-2023.03-SP2/hspice/parts/xilinx
+       option parhier = local
+       option scale =    2.500E-08
+       option post
+ init: end read circuit files, cpu clock= 8.52E-01 peak memory=     519 mb
+ init: begin check errors, cpu clock= 8.52E-01
+ init: end check errors, cpu clock= 8.84E-01 peak memory=     520 mb
+ init: begin setup matrix, pivot=     0 cpu clock= 8.84E-01
+       establish matrix -- done, cpu clock= 8.84E-01 peak memory=     520 mb
+       re-order matrix -- done, cpu clock= 8.84E-01 peak memory=     520 mb
+ init: end setup matrix, cpu clock= 8.86E-01 peak memory=     520 mb
+ dcop: begin dcop, cpu clock= 8.88E-01
+ dcop: end dcop, cpu clock= 8.90E-01 peak memory=     520 mb tot_iter=       3
+ output: fo4manual.mt0
+ sweep: tran tran0    begin, stop_t=  1.00E-08 #sweeps=1001 cpu clock= 8.90E-01
+ tran: time= 1.0000E-09 tot_iter=     349 conv_iter=     130 cpu clock= 8.97E-01
+ tran: time= 2.0173E-09 tot_iter=     713 conv_iter=     265 cpu clock= 9.04E-01
+ tran: time= 3.0036E-09 tot_iter=    1062 conv_iter=     391 cpu clock= 9.10E-01
+ tran: time= 4.0170E-09 tot_iter=    1412 conv_iter=     519 cpu clock= 9.17E-01
+ tran: time= 5.0087E-09 tot_iter=    1762 conv_iter=     646 cpu clock= 9.23E-01
+ tran: time= 6.0137E-09 tot_iter=    2108 conv_iter=     773 cpu clock= 9.29E-01
+ tran: time= 7.0082E-09 tot_iter=    2460 conv_iter=     901 cpu clock= 9.36E-01
+ tran: time= 8.0050E-09 tot_iter=    2820 conv_iter=    1033 cpu clock= 9.42E-01
+ tran: time= 9.0171E-09 tot_iter=    3178 conv_iter=    1165 cpu clock= 9.49E-01
+ tran: time= 1.0000E-08 tot_iter=    3525 conv_iter=    1291 cpu clock= 9.55E-01
+ sweep: tran tran0    end, cpu clock= 9.55E-01 peak memory=     520 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

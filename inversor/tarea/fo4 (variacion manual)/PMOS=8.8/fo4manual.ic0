@@ -1,9 +1,9 @@
 * "simulator" "PrimeSim HSPICE"
 * "version" "U-2023.03-SP2 linux64"
 * "format" "HSP"
-* "rundate" "19:10:49 03/15/2024 "
-* "netlist" "fo4opt.sp "
-* "runtitle" "* fo4opt.sp"
+* "rundate" "18:48:50 03/15/2024 "
+* "netlist" "fo4manual.sp "
+* "runtitle" "* fo4manual.sp"
 * time =    0.            
 * temperature =   70.0000        
 *** BEGIN: Saved Operating Point ***                     
@@ -12,9 +12,9 @@
 .nodeset
 + a =   0.            
 + b =   1.8000        
-+ c =  14.6002n       
++ c =  11.6962n       
 + d =   1.8000        
-+ e =  14.6002n       
++ e =  11.6962n       
 + f =   1.8000        
 + vdd =   1.8000        
 ***   END: Saved Operating Point ***                     
