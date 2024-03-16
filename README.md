@@ -36,7 +36,7 @@ $$V_{inv}=\frac{1.8-0.6+0.45}{2}=0.825V$$
 
 ## Resultados de las simulaciones
 ### NMOS - Curva característica
-Para las curvas características del NMOS se genera el diagrama de la siguente manera:
+Para las curvas características del NMOS se genera el diagrama de la siguente manera ([esquematico](nmos/schematic/)):
 
 ![alt text](imagenes/nmos_esquematico.png)
 
@@ -72,16 +72,16 @@ v4 vgs gnd 0
 
 .end
 ```
-Una vez con la simulación se obtienen los datos para la curva característica, la cual se muestra en la siguiente figura:
+Una vez con la simulación se obtienen los datos para la curva característica, la cual se muestra en la siguiente figura ([datos](nmos/graficas.xlsx)):
 
 ![alt text](imagenes/curva_caracteristica.png)
 
 ## Inversor
-El esquemático utilizado para el inversor se muestra en la siguiente figura:
+El esquemático utilizado para el inversor se muestra en la siguiente figura ([esquematico](inversor/schematic/)):
 
 ![alt text](imagenes/inversor_esquematico.png)
 
-Para simular el voltaje de salida y entrada se utliza el siguiente código:
+Para simular el voltaje de salida y entrada se utliza el siguiente código ([script](inversor/tarea/inversorCompleto/inversor_test.sp)):
 ```
 *  inversor_test.sp
 
@@ -125,7 +125,7 @@ Y también se puede obtener las gráficas con el valor de la corriente Ids(i(v2)
 ![alt text](imagenes/Vout_ID.png)
 
 ## Fanout of 4 (Fo4) - Inversor
-Para esta sección se utiliza el siguiente código para crear subcircuitos del inversor:
+Para esta sección se utiliza el siguiente código para crear subcircuitos del inversor ([script](inversor/tarea/fo4/H=4/fo4.sp)):
 ```
 * fo4.sp
 *----------------------------------------------------------------------
@@ -193,7 +193,7 @@ De esta gráfica se obtienen los valores de tpdr, tpdf, tpd, trise, tfall, tambi
 
 ## Fo4 - variación manual de PMOS
 
-Los datos que se hicieron manualmente se encuentran en la siguiente tabla (las comprobaciones se encuentran en la capeta de de (imagenes/tiempos)):
+Los datos que se hicieron manualmente se encuentran en la siguiente tabla ([datos](imagenes/tiempos/)):
 |PMOS(nm)|PMOS/NMOS|tpdr(ps)|tpdf(ps)|diferencia = tpdr-tpdf [ps]|
 |-------|------|-------|--------|-------|
 |418,0000|1,9000|58,2700|58,2194|0,05060|
@@ -206,13 +206,13 @@ Los datos que se hicieron manualmente se encuentran en la siguiente tabla (las c
 |425,0000|1,9318|57,8570|58,5676|-0,7106|
 |440,0000|2,0000|56,7592|59,3732|-2,6140|
 
-La gráfica de la relación PMOS/NMOS con tpdr, tpdf se muestra en la siguiente imagen:
+La gráfica de la relación PMOS/NMOS con tpdr, tpdf se muestra en la siguiente imagen ([excel](inversor/tarea/fo4%20(variacion%20manual))):
 ![alt text](imagenes/graficaRelacion.png)
 
 En base a los resultados obtenidos de las variaciones manuales, el valor que más se aproxima a una diferencia de tpdr-tpdf igual a 0, es el que tiene el tamaño de PMOS de 418,525n con una relación de PMOS/NMOS igual a 1.9023, ya que su valor de tpdr-tpdf = -0.0009ps o mejor dicho -900a, en donde en la gráfica se observa donde se cruzan las dos lineas con un promedio de tiempo de **58.24205ps**.
 
 ## Fo4 optimizado - Inversor
-Para obtener la optimización del Fo4 se utiliza el siguiente código:
+Para obtener la optimización del Fo4 se utiliza el siguiente código ([script](inversor/tarea/fo4opt/H=4/fo4opt.sp)):
 ```
 * fo4opt.sp
 *----------------------------------------------------------------------
