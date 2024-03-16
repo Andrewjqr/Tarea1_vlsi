@@ -228,7 +228,7 @@ X5 e f inv P='P1' M=256 * load on load
 *----------------------------------------------------------------------
 * Optimization setup
 *----------------------------------------------------------------------
-.param P1=optrange(8,4,16) * search from 4 to 16, guess 8
+.param P1=optrange(17.6,8.8,35.2) * search from 8.8 to 35.2, guess 17.6
 .model optmod opt itropt=30 * maximum of 30 iterations
 .measure bestratio param='P1/4' * compute best P/N ratio
 *----------------------------------------------------------------------
@@ -252,11 +252,11 @@ Con el código anterior se obtiene la siguiente gráfica:
 Y en base a estos resultados también se obtienen los siguientes valores ya optimizados:
 |Parámetro|Tiempo(ps)|Targ|Trig|
 |---|---|---|---|
-|tpdr|59.3174|298.8194|239.5020|
-|tpdf|57.2955|171.7359|114.4404|
-|tpd|58.3064|||
+|tpdr|57.9524|297.3057|239.3533|
+|tpdf|58.4849|174.5592|116.0743|
+|tpd|58.2187|||
 
-Esto indica una diferencia de 2.0219ps.
+Esto indica una diferencia de tpdr-tpdf de -532.5770fs.
 
 ## Comparación de simulación y cálculos
 
