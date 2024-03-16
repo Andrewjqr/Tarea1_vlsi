@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='U-2023.03-SP2 linux6' PARAM_COUNT=0
+.TITLE '* fo4.sp'
+ tpdr             tpdf             tpd              trise           
+ tfall            average          diff             temper          
+ alter#          
+  5.824e-11        5.824e-11        5.824e-11        7.071e-11      
+  5.844e-11        5.824e-11       -8.915e-16         70.0000       
+1               
