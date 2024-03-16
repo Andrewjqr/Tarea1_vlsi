@@ -258,8 +258,6 @@ Y en base a estos resultados también se obtienen los siguientes valores ya opti
 
 Esto indica una diferencia de 2.0219ps.
 
-Se decidió mantener la relación que se obtuvo de forma manual con anterioridad ya que este presentaba un menor diff ($t_{pdr}-t_{pdf}$) el cual era el objetivo de la optimización. Además de presentar un promedio ligeramente menor al del código de optimización.
-
 ## Comparación de simulación y cálculos
 
 Se puede calcular la diferencia de los tiempos de propagación para diferentes fanouts mantienendo la relación $P/N = 2/1$ y siguiendo la formula para los valores de $h=3$ y $h=4$:
