@@ -7,7 +7,7 @@ $$R = \frac{V_{DD}}{I_H + I_L}$$
 
 En este caso $I_H$ es aproximada a la corriente de saturación e $I_L$ a la corriente de corte, por lo que la ecuación queda:
 $$R_n = \frac{1.8V}{(475\mu A + 3pA)/\mu m} = 3789\Omega$$ 
-$$R_p = \frac{1.8V}{(170\mu A + 3pA)/\mu m} = 10588.24\Omega $$
+$$R_p = \frac{1.8V}{(170\mu A + 3pA)/\mu m} = 10588.24\Omega$$
 
 Luego se procede con la obtención de la capacitancia de compuerta. Para ello, se utilizó la siguiente formula:
 $$C = \frac{2}{3}W*L*C_{ox}+W*C_{ov}$$
@@ -284,3 +284,17 @@ Se puede calcular la diferencia de los tiempos de propagación para diferentes f
 
 $$\Delta t_{pdr}= \frac{3}{2}R_pC = 2.7675*10^{-12}s$$
 $$\Delta t_{pdf}=3R_nC=25.893*10^{-12}s$$
+
+Para obtener la resistencia efectiva de los transistores se realiza la medición de los $\Delta t_{pd}$ con la relación P/N obtenida en la optimización. Los tiempos para el caso de h=4 ya fueron observados con anterioridad. Para el caso de h=3 se realiza la simulación que se encuentra en la carpeta imagenes/tiempos. Ya con los tiempos medidos se obtienen los siguientes valores:
+
+$$\Delta t_{pdr}=9.1442ps$$
+$$\Delta t_{pdf}=8.6228ps$$
+
+De ahí se procede a despejar las ecuaciones de $\Delta t_{pd}$ para obtener los valores simulados de $R_p$ y $R_n$.
+
+$$9.1442ps = \frac{3}{2}*R_p*0.8152fF$$
+$$R_p=7478.08\Omega$$
+$$8.6228ps=3*R_n*0.487fF$$
+$$R_n=5901.98\Omega$$
+
+Se puede apreciar una diferencia significativa entre las resistencias efectivas obtenidas de forma teórica con las obtenidas mediante la simulación. Es necesario destacar que los teóricos omiten información que se hacen presentes a la hora de simular. Por lo que es preferible tomar las resistencias medidas para estar más cercanos a valores reales.
