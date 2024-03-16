@@ -206,7 +206,7 @@ Los datos que se hicieron manualmente se encuentran en la siguiente tabla (las c
 |425,0000|1,9318|57,8570|58,5676|-0,7106|
 |440,0000|2,0000|56,7592|59,3732|-2,6140|
 
-La gráfica de la relación PMOS/NOMS con tpdr, tpdf se muestra en la siguiente imagen:
+La gráfica de la relación PMOS/NMOS con tpdr, tpdf se muestra en la siguiente imagen:
 ![alt text](imagenes/graficaRelacion.png)
 
 En base a los resultados obtenidos de las variaciones manuales, el valor que más se aproxima a una diferencia de tpdr-tpdf igual a 0, es el que tiene el tamaño de PMOS de 418,525n con una relación de PMOS/NMOS igual a 1.9023, ya que su valor de tpdr-tpdf = -0.0009ps o mejor dicho -900a, en donde en la gráfica se observa donde se cruzan las dos lineas con un promedio de tiempo de **58.24205ps**.
